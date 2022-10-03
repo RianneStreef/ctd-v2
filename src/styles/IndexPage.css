@@ -1,0 +1,31 @@
+/* @media (min-width: 768px) {
+  .landing {
+    height: 100vh;
+  }
+} */
+
+.bunting {
+  width: 100%;
+  margin: 0;
+  height: 120px;
+  left: 0;
+  bottom: 0px;
+  overflow: hidden;
+  background-image: url(../images/buntingSMALL.jpg);
+  background-size: contain;
+  animation: clouds_animation 75s linear infinite;
+}
+
+@keyframes clouds_animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2122px 0;
+  }
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,143 @@
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-highlight);
+}
+
+.logo-text-footer {
+  font-family: "Montserrat";
+  font-size: 30px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer-logo {
+  width: 100%;
+}
+
+.footer-links-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer-link-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.footer-link-column a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.footer-link-column a:visited {
+  color: var(--color-text);
+}
+
+.footer-link-column-middle {
+  border-left: 1px solid black;
+}
+
+.contact-footer {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0 20px;
+  font-size: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-link {
+  width: 20px;
+  margin: 10px;
+}
+
+.social-links p {
+  font-size: 15px;
+}
+
+.social-link a {
+  color: #000;
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+
+.newsletter button {
+  font-family: "Montserrat";
+}
+
+.set-language-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.copyright p {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+.copyright a:visited {
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .footer-links-total {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-links-total > * {
+    width: 25%;
+  }
+
+  .contact-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .copyright {
+    flex-direction: row;
+  }
+}

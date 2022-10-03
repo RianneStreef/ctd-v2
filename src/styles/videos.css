@@ -1,0 +1,32 @@
+.instruction-video {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction-video h2 {
+  margin: 20px;
+}
+
+video {
+  width: 95%;
+  margin: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .instruction-video {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .instruction-video h2 {
+    margin: 0;
+    text-align: left;
+  }
+
+  video {
+    width: 30%;
+    margin: 50px 100px;
+  }
+}

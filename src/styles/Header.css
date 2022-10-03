@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+}
+
+.nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    padding: 0 20px;
+    height: 55px;
+  }
+}
+
+.fixed-navbar {
+  position: inline-block;
+}
+
+.navbar-placeholder {
+  height: 55px;
+  width: 100%;
+}
+
+.fixed-navbar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+}
+
+.menu-item-text {
+  align-items: center !important;
+}

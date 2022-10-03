@@ -1,0 +1,68 @@
+.bunting-shells {
+  width: 100%;
+  margin: 0;
+  height: 120px;
+  left: 0;
+  bottom: 0px;
+  overflow: hidden;
+  background-image: url(../images/shells-banner.jpg);
+  background-size: contain;
+  animation: clouds_animation 75s linear infinite;
+}
+
+@keyframes clouds_animation {
+  
+  0%  {background-position: 0 0;}
+  100%  {background-position: -2122px 0;}
+}
+
+.images-container-shells {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+
+.shells-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shells-video {
+  max-height: 80vh;
+  margin: 50px auto;
+}
+
+.shells-drawing-desktop {
+  display: none;
+}
+
+.shells-drawing-mobile {
+  width: 100%; 
+}
+
+.shells-intro {
+  margin: 50px 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .shells-intro {
+    margin: 50px 100px;
+  }
+
+  .images-container-shells > * {
+    width: 30%;
+  }
+
+  .shells-drawing-desktop {
+    display: inline;
+    height: 20%;
+  }
+  .shells-drawing-mobile {
+    display: none;
+  }
+}

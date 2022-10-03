@@ -1,0 +1,30 @@
+.subscribe-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-input {
+  background-color: var(--color-highlight);
+}
+
+.subscribe-text {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .subscribe-input {
+    width: 90%;
+  }
+}
+
+.subscribe-button {
+  background-color: #fff;
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.subscribe-text {
+  text-align: center;
+}
