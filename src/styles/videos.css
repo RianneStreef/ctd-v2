@@ -26,13 +26,10 @@ video {
     justify-content: space-between;
   }
 
-  .video-title {
-    width: 50%;
-  }
-
   .instruction-video h2 {
     margin: 0;
     text-align: left;
+    width: 50%;
   }
 
   video {
