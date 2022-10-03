@@ -5,8 +5,14 @@
   align-items: center;
 }
 
+.video-title {
+  display: flex;
+  align-items: flex-start;
+}
+
 .instruction-video h2 {
   margin: 20px;
+  width: 100%;
 }
 
 video {
@@ -17,7 +23,11 @@ video {
 @media only screen and (min-width: 768px) {
   .instruction-video {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .video-title {
+    width: 50%;
   }
 
   .instruction-video h2 {

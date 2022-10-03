@@ -20,8 +20,6 @@ const en = (props) => {
 
   const { data } = props;
 
-  console.log(data.allContentfulInstructionVideo.nodes[0].video.file.url);
-
   const video = data.allContentfulInstructionVideo.nodes[0].video.file.url;
 
   return (
@@ -32,7 +30,7 @@ const en = (props) => {
         languageToUse={languageToUse}
       />
       <div className="instruction-video">
-        <video id="background-video" autoPlay playsInline loop>
+        <video id="background-video" autoPlay playsInline loop controls>
           <source src={video} type="video/mp4" />
         </video>
         <h2>Screen printing instruction video</h2>
