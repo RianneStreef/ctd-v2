@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 
 import "../../../styles/videos.css";
 
-import video from "../../../images/videos/screenprinting-en.mp4";
+import video from "../../../images/videos/stamping-en.mp4";
 
 const en = (props) => {
   let { language, setLanguage, languageToUse } = props;
