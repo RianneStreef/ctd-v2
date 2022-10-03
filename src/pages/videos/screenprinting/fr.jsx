@@ -7,6 +7,8 @@ import Footer from "../../../components/Footer";
 import { content } from "../../../content/languages";
 import { Helmet } from "react-helmet";
 
+import video from "../../../images/videos/screenprinting-en.mp4";
+
 import "../../../styles/videos.css";
 
 const en = (props) => {
