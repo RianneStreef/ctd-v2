@@ -7,8 +7,6 @@ import Footer from "../../../components/Footer";
 import { content } from "../../../content/languages";
 import { Helmet } from "react-helmet";
 
-import video from "../../../images/videos/screenprinting-en.mp4";
-
 import "../../../styles/videos.css";
 
 const en = (props) => {
@@ -25,9 +23,9 @@ const en = (props) => {
         languageToUse={languageToUse}
       />
       <div className="instruction-video">
-        <video id="background-video" autoPlay playsInline loop>
+        {/* <video id="background-video" autoPlay playsInline loop>
           <source src={video} type="video/mp4" />
-        </video>
+        </video> */}
 
         <h2>Screen printing instruction video</h2>
       </div>

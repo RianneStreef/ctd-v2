@@ -9,8 +9,6 @@ import Footer from "../../../components/Footer";
 import { content } from "../../../content/languages";
 import { Helmet } from "react-helmet";
 
-import video from "../../../images/videos/screenprinting-en.mp4";
-
 import "../../../styles/videos.css";
 
 const en = (props) => {
@@ -19,6 +17,12 @@ const en = (props) => {
   language === "english"
     ? (languageToUse = content.english)
     : (languageToUse = content.french);
+
+  const { data } = props;
+
+  console.log(data.allContentfulInstructionVideo.nodes[0].video.file.url);
+
+  const video = data.allContentfulInstructionVideo.nodes[0].video.file.url;
 
   return (
     <div>
@@ -41,6 +45,23 @@ const en = (props) => {
     </div>
   );
 };
+
+export const coursesQuery = graphql`
+  query videosQuery {
+    allContentfulInstructionVideo(
+      filter: { name: { eq: "screenprinting-en" } }
+    ) {
+      nodes {
+        video {
+          file {
+            url
+          }
+        }
+        name
+      }
+    }
+  }
+`;
 
 en.Layout = Layout;
 export default en;
