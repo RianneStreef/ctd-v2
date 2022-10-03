@@ -20,9 +20,6 @@ const ProductsPage = (props) => {
   const { data } = props;
 
   let courses = data.allContentfulCourse.nodes;
-  console.log(courses);
-  console.log(courses);
-  console.log(courses[0].description.description);
 
   language === "english"
     ? (languageToUse = content.english)

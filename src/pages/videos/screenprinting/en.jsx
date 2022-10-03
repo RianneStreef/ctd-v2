@@ -1,5 +1,7 @@
 import React from "react";
 
+import { graphql } from "gatsby";
+
 import Layout from "../../../components/Layout";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
@@ -7,9 +9,9 @@ import Footer from "../../../components/Footer";
 import { content } from "../../../content/languages";
 import { Helmet } from "react-helmet";
 
-import "../../../styles/videos.css";
+import video from "../../../images/videos/screenprinting-en.mp4";
 
-import video from "../../../images/videos/stamping-en.mp4";
+import "../../../styles/videos.css";
 
 const en = (props) => {
   let { language, setLanguage, languageToUse } = props;
@@ -17,6 +19,7 @@ const en = (props) => {
   language === "english"
     ? (languageToUse = content.english)
     : (languageToUse = content.french);
+
   return (
     <div>
       <Header
@@ -28,7 +31,6 @@ const en = (props) => {
         <video id="background-video" autoPlay playsInline loop>
           <source src={video} type="video/mp4" />
         </video>
-
         <h2>Screen printing instruction video</h2>
       </div>
       <Footer
