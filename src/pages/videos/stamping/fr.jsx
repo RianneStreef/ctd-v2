@@ -37,7 +37,7 @@ const en = (props) => {
         <video id="background-video" playsInline loop controls>
           <source src={video} type="video/mp4" />
         </video>
-        <h2>Screen printing instruction video</h2>
+        <h2>Video d'instruction sérigraphie</h2>
       </div>
       <Footer
         language={language}
@@ -50,9 +50,7 @@ const en = (props) => {
 
 export const coursesQuery = graphql`
   query videosQuery {
-    allContentfulInstructionVideo(
-      filter: { name: { eq: "screenprinting-en" } }
-    ) {
+    allContentfulInstructionVideo(filter: { name: { eq: "stamping-fr" } }) {
       nodes {
         video {
           file {

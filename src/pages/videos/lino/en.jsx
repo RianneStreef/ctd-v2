@@ -50,9 +50,7 @@ const en = (props) => {
 
 export const coursesQuery = graphql`
   query videosQuery {
-    allContentfulInstructionVideo(
-      filter: { name: { eq: "screenprinting-en" } }
-    ) {
+    allContentfulInstructionVideo(filter: { name: { eq: "lino-en" } }) {
       nodes {
         video {
           file {
