@@ -37,7 +37,7 @@ const en = (props) => {
         <video id="background-video" playsInline loop controls>
           <source src={video} type="video/mp4" />
         </video>
-        <h2>Screen printing instruction video</h2>
+        <h2>Printing instruction video</h2>
       </div>
       <Footer
         language={language}
