@@ -1,15 +1,15 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Layout from "../../components/Layout";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-import stamp from "../images/stamp.jpg";
+import stamp from "../../images/stamp.jpg";
 
 import { graphql } from "gatsby";
 
-import "../styles/CoursesPage.css";
+import "../../styles/CoursesPage.css";
 
-import { content } from "../content/languages";
+import { content } from "../../content/languages";
 import { Helmet } from "react-helmet";
 
 import ReactMarkdown from "react-markdown";
@@ -21,7 +21,7 @@ const ProductsPage = (props) => {
 
   let courses = data.allContentfulCourse.nodes;
 
-  languageToUse = content.english;
+  languageToUse = content.french;
 
   const coursesList = courses
     .filter((course) => course.language === languageToUse.language)
@@ -89,7 +89,7 @@ const ProductsPage = (props) => {
     <>
       <Helmet
         htmlAttributes={{
-          lang: "en",
+          lang: "fr",
         }}
       >
         <title>{languageToUse.courses}</title>

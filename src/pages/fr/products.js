@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Layout from "../../components/Layout";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 import { graphql } from "gatsby";
 
-import "../styles/ProductPage.css";
+import "../../styles/ProductPage.css";
 
-import { content } from "../content/languages";
+import { content } from "../../content/languages";
 import { Helmet } from "react-helmet";
 
 const ProductsPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
 
-  languageToUse = content.english;
+  languageToUse = content.french;
 
   const { data } = props;
 
@@ -76,7 +76,7 @@ const ProductsPage = (props) => {
     <>
       <Helmet
         htmlAttributes={{
-          lang: "en",
+          lang: "fr",
         }}
       >
         <title>Products</title>

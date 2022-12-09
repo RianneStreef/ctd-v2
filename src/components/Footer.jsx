@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "gatsby";
+
 import "../styles/Footer.css";
 
 import Subscribe from "../components/Subscribe";
@@ -50,7 +52,8 @@ const Footer = (props) => {
             </a>
           </p>
           <div className="set-language-footer">
-            <button
+            <Link
+              to="/"
               onClick={() => handleSetLanguage("english")}
               onKeyPress={() => handleSetLanguage("english")}
               className="invisible-button"
@@ -62,8 +65,9 @@ const Footer = (props) => {
                   languageToUse.language === "english" ? "opaque" : "fade"
                 } `}
               />
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/fr/"
               onClick={() => handleSetLanguage("french")}
               onKeyPress={() => handleSetLanguage("french")}
               className="invisible-button"
@@ -75,7 +79,7 @@ const Footer = (props) => {
                   languageToUse.language === "french" ? "opaque" : "fade"
                 } `}
               />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

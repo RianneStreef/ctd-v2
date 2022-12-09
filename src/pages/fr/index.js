@@ -1,26 +1,26 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Intro from "../components/Intro";
-import Contact from "../components/Contact";
-import Insta from "../components/Insta";
-import Footer from "../components/Footer";
+import Layout from "../../components/Layout";
+import Header from "../../components/Header";
+import Intro from "../../components/Intro";
+import Contact from "../../components/Contact";
+import Insta from "../../components/Insta";
+import Footer from "../../components/Footer";
 
-import "../styles/IndexPage.css";
+import "../../styles/IndexPage.css";
 
-import { content } from "../content/languages";
+import { content } from "../../content/languages";
 import { Helmet } from "react-helmet";
 
 const IndexPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
 
-  languageToUse = content.english;
+  languageToUse = content.french;
 
   return (
     <div>
       <Helmet
         htmlAttributes={{
-          lang: "en",
+          lang: "fr",
         }}
       >
         <title>Claire Turner Design</title>

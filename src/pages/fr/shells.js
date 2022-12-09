@@ -1,26 +1,26 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Layout from "../../components/Layout";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-import "../styles/ShellsPage.css";
+import "../../styles/ShellsPage.css";
 
-import promoVideo from "../images/promo.mp4";
-import Huckleberry from "../images/huckleberry.jpg";
+import promoVideo from "../../images/promo.mp4";
+import Huckleberry from "../../images/huckleberry.jpg";
 
-import { content } from "../content/languages";
+import { content } from "../../content/languages";
 import { Helmet } from "react-helmet";
 
 const ShellsPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
 
-  languageToUse = content.english;
+  languageToUse = content.french;
 
   return (
     <div>
       <Helmet
         htmlAttributes={{
-          lang: "en",
+          lang: "fr",
         }}
       >
         <title>Shells and Shanties</title>

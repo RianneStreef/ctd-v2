@@ -89,34 +89,49 @@ const RightNav = (props) => {
   return (
     <Ul open={open}>
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#about" title="About me">
+        <AnchorLink
+          to={language === "english" ? "/#about" : "/fr/#about"}
+          title="About me"
+        >
           <span className="menu-item-text">{languageToUse.about}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#contact" title="Contact">
+        <AnchorLink
+          to={language === "english" ? "/#contact" : "/fr/#contact"}
+          title="Contact"
+        >
           <span>{languageToUse.contact}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li>
-        <Link to="/products" onClick={() => setOpen(!open)}>
+        <Link
+          to={language === "english" ? "/products" : "/fr/products"}
+          onClick={() => setOpen(!open)}
+        >
           {languageToUse.products}
         </Link>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/courses" title="Pictures">
+        <AnchorLink
+          to={language === "english" ? "/courses" : "/fr/courses"}
+          title="Pictures"
+        >
           <span>{languageToUse.courses}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
       <li>
-        <Link to="/shells" onClick={() => setOpen(!open)}>
+        <Link
+          to={language === "english" ? "/shells" : "/fr/shells"}
+          onClick={() => setOpen(!open)}
+        >
           Shells and Shanties
         </Link>
       </li>
