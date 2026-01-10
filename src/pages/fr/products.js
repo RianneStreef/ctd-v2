@@ -53,7 +53,9 @@ const ProductsPage = (props) => {
         <div
           className="product-card"
           style={{
-            backgroundImage: `url(${product.productImage.file.url})`,
+            backgroundImage: product.productImage?.file?.url
+              ? `url(${product.productImage.file.url})`
+              : "none",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

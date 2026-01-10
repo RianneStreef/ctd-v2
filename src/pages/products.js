@@ -52,12 +52,16 @@ const ProductsPage = (props) => {
         <h2 className="product-name">{product.productName}</h2>
         <div
           className="product-card"
-          style={{
-            backgroundImage: `url(${product.productImage.file.url})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
+      
+     style={{
+  backgroundImage: product.productImage?.file?.url
+    ? `url(${product.productImage.file.url})`
+    : "none",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+}}
+
         >
           <span className="product-price">{product.productPrice}</span>
           {language === "french" ? (
