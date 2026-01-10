@@ -2,136 +2,123 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Helmet } from "react-helmet";
 
 import stamp from "../../images/stamp.jpg";
-
-import { graphql } from "gatsby";
-
 import "../../styles/CoursesPage.css";
 
 import { content } from "../../content/languages";
-import { Helmet } from "react-helmet";
+// import ReactMarkdown from "react-markdown";
+// import { graphql } from "gatsby";
 
-import ReactMarkdown from "react-markdown";
+const CoursesPage = ({ language, setLanguage }) => {
+  // Choose language (adjust later if needed)
+  const languageToUse = content.french;
 
-const ProductsPage = (props) => {
-  let { language, setLanguage, languageToUse } = props;
+  /*
+  ============================
+  FUTURE COURSES SETUP (OFF)
+  ============================
 
-  const { data } = props;
+  When courses are added back:
+  1. Uncomment the GraphQL query at the bottom
+  2. Uncomment this block
+  3. Run: gatsby clean
+  */
 
-  let courses = data.allContentfulCourse.nodes;
+  // const courses = data?.allContentfulCourse?.nodes ?? [];
+  // const hasCourses = courses.length > 0;
 
-  languageToUse = content.french;
+  // const coursesList = hasCourses
+  //   ? courses
+  //       .filter(course => course.language === languageToUse.language)
+  //       .map(course => (
+  //         <div className="course-description" key={course.id}>
+  //           <div className="class-card">
+  //             <div className="class-card-header">
+  //               <h3>{course.title}</h3>
+  //               {course.full && (
+  //                 <span className="full">{languageToUse.full}</span>
+  //               )}
+  //             </div>
 
-  const coursesList = courses
-    .filter((course) => course.language === languageToUse.language)
-    .map((course) => {
-      return (
-        <div
-          className="course-description"
-          key={course.id}
-          // style={{
-          //   backgroundImage: `url(${course.image.file.url})`,
-          //   backgroundSize: "contain",
-          //   backgroundRepeat: "no-repeat",
-          //   backgroundPosition: "center",
-          //   height: "30vw",
-          //   width: "20vw",
-          // }}
-        >
-          {/* <div className={`full-banner ${!course.full ? "hidden" : ""}`}>
-            {languageToUse.full}
-          </div> */}
-          <div className="class-card">
-            <div className="class-card-header">
-              <h3>{course.title}</h3>
-              {course.full ? (
-                <span className="full">{languageToUse.full}</span>
-              ) : null}
-            </div>
-            <div className="inner-class-card">
-              <div className="course-info">
-                <h4>{languageToUse.dates}:</h4>
-                <p>{course.dates}</p>
-                <h4>{languageToUse.price}:</h4>
+  //             <div className="inner-class-card">
+  //               <div className="course-info">
+  //                 <h4>{languageToUse.dates}:</h4>
+  //                 <p>{course.dates}</p>
 
-                <p>{course.price}</p>
-                {/* {course.description && (
-                  <ReactMarkdown>
-                    <div>
-                      <h4>{languageToUse.description}</h4>
-                      {course.description.description}
-                    </div>
-                  </ReactMarkdown>
-                )} */}
+  //                 <h4>{languageToUse.price}:</h4>
+  //                 <p>{course.price}</p>
 
-                {course.description && (
-                  <>
-                    <h4>{languageToUse.description}:</h4>
-                    <ReactMarkdown children={course.description.description} />
-                  </>
-                )}
-              </div>
-              <div className="course-flyer-container">
-                <img
-                  src={course.image.file.url}
-                  alt="course flyer"
-                  className="course-flyer"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    });
+  //                 {course.description?.description && (
+  //                   <>
+  //                     <h4>{languageToUse.description}:</h4>
+  //                     <ReactMarkdown>
+  //                       {course.description.description}
+  //                     </ReactMarkdown>
+  //                   </>
+  //                 )}
+  //               </div>
+
+  //               {course.image?.file?.url && (
+  //                 <div className="course-flyer-container">
+  //                   <img
+  //                     src={course.image.file.url}
+  //                     alt={course.title}
+  //                     className="course-flyer"
+  //                   />
+  //                 </div>
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       ))
+  //   : null;
 
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          lang: "fr",
-        }}
-      >
+      <Helmet htmlAttributes={{ lang: "fr" }}>
         <title>{languageToUse.courses}</title>
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
           content="Children's Illustrations for all ages made by Claire Turner, in Talloires, France."
         />
-        <meta
-          name="keywords"
-          content="children's illustrations, animal illustrations, Talloires, France, Shell and Shanties, watercolors, digital prints, ink drawing, acrylic, bunting"
-        />
         <link rel="canonical" href="https://www.claireturner-design.com/" />
       </Helmet>
+
       <Header language={language} languageToUse={languageToUse} />
-      <div className="course-contact-container">
+
+      <main className="course-contact-container">
         <div className="stamp-container">
-          <img src={stamp} className="stamp" />
+          <img src={stamp} className="stamp" alt="stamp" />
         </div>
+
         <h2>{languageToUse.inscriptionRequest}</h2>
+
+        {/* FUTURE COURSES RENDER */}
+        {/* {hasCourses && (
+          <section className="courses-list">{coursesList}</section>
+        )} */}
 
         <div className="class-form">
           <form
-            name="art-class"
+            name="class"
             method="post"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input
-              className="class-input"
-              type="hidden"
-              name="contact"
-              value="contact"
-            />
+            <input type="hidden" name="form-name" value="class" />
+
             <p className="hidden">
               <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
+                Don’t fill this out if you’re human:
+                <input name="bot-field" />
               </label>
             </p>
-            <input type="hidden" name="form-name" value="class" />
+
             <p className="form-items">
-              <label htmlFor="name">{languageToUse.name}:</label> <br />
+              <label htmlFor="name">{languageToUse.name}:</label>
               <input
                 className="input"
                 type="text"
@@ -140,8 +127,9 @@ const ProductsPage = (props) => {
                 required
               />
             </p>
+
             <p className="form-items">
-              <label htmlFor="age">{languageToUse.age}:</label> <br />
+              <label htmlFor="age">{languageToUse.age}:</label>
               <input
                 className="input"
                 type="number"
@@ -150,12 +138,14 @@ const ProductsPage = (props) => {
                 required
               />
             </p>
+
             <p className="form-items">
-              <label htmlFor="class">{languageToUse.class}:</label> <br />
+              <label htmlFor="class">{languageToUse.class}:</label>
               <input className="input" type="text" id="class" name="class" />
             </p>
+
             <p className="form-items">
-              <label htmlFor="email">{languageToUse.email}:</label> <br />
+              <label htmlFor="email">{languageToUse.email}:</label>
               <input
                 className="input"
                 type="email"
@@ -164,28 +154,26 @@ const ProductsPage = (props) => {
                 required
               />
             </p>
+
             <p className="form-items">
-              <label htmlFor="message">{languageToUse.message}:</label> <br />
+              <label htmlFor="message">{languageToUse.message}:</label>
               <textarea
                 id="message"
                 name="message"
-                required
                 rows="8"
+                required
               ></textarea>
             </p>
+
             <div className="button-container">
-              <button
-                className="custom_button"
-                type="submit"
-                value="Submit message"
-              >
+              <button className="custom_button" type="submit">
                 {languageToUse.send}
               </button>
             </div>
           </form>
         </div>
-      </div>
-      <div className="courses-list">{coursesList}</div>
+      </main>
+
       <Footer
         language={language}
         setLanguage={setLanguage}
@@ -194,29 +182,38 @@ const ProductsPage = (props) => {
     </>
   );
 };
-export const coursesQuery = graphql`
-  query coursesQuery {
-    allContentfulCourse(sort: { fields: startDate }) {
+
+CoursesPage.Layout = Layout;
+export default CoursesPage;
+
+/*
+====================================
+FUTURE GRAPHQL QUERY (OFF)
+====================================
+
+Uncomment ONLY when ContentfulCourse
+and its fields exist again.
+
+export const query = graphql`
+  query CoursesPageQuery {
+    allContentfulCourse {
       nodes {
         id
+        title
         dates
+        price
+        full
+        language
         description {
           description
         }
-        full
         image {
           file {
             url
           }
         }
-        language
-        location
-        title
-        price
       }
     }
   }
 `;
-
-ProductsPage.Layout = Layout;
-export default ProductsPage;
+*/

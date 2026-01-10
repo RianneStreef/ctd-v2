@@ -20,6 +20,9 @@ const Header = (props) => {
   useEffect(() => {
     document.addEventListener("scroll", function () {
       const banner = document.getElementById("banner");
+
+      if (!banner) return;
+
       const bannerHeight = banner.clientHeight;
       const bannerPosition = window.scrollY;
       if (!isHeaderSticky && bannerPosition <= bannerHeight) {
