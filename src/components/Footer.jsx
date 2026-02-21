@@ -47,8 +47,11 @@ const Footer = (props) => {
           </a> */}
           <p>
             {languageToUse.visit}
-            <a href="https://claireturnerdesign.patternbyetsy.com/">
-              Etsy Shop!{" "}
+            <a
+              href="https://claireturnerdesign.sumupstore.com/"
+              target="_blank"
+            >
+              {languageToUse.eshop}{" "}
             </a>
           </p>
           <div className="set-language-footer">

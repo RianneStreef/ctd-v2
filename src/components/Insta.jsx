@@ -7,17 +7,14 @@ const Insta = () => {
   return (
     <>
       <Helmet>
-        <script
-          src="https://cdn2.woxo.tech/a.js#60ca0c172d51e300159c2b7c"
-          async
-          data-usrc
-        />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
       </Helmet>
-      <div
-        className="insta"
-        id="insta"
-        data-mc-src="8aac3812-8087-474e-9259-73b5b65b3b85#instagram"
-      />
+      <div className="insta">
+        <div
+          class="elfsight-app-8e62119a-b7c4-4138-b8a4-bfcea1d8a82f"
+          data-elfsight-app-lazy
+        ></div>
+      </div>
     </>
   );
 };

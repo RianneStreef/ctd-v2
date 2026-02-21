@@ -1,0 +1,22 @@
+.expos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expo-flyer {
+  width: 90vw;
+  margin: 50px;
+}
+
+@media (min-width: 768px) {
+  .expos-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .expo-flyer {
+    width: 30vw;
+    margin: 50px;
+  }
+}

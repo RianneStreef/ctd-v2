@@ -1,17 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import Intro from "../components/Intro";
-import Contact from "../components/Contact";
-import Insta from "../components/Insta";
 import Footer from "../components/Footer";
-
-import "../styles/IndexPage.css";
+import Expos from "../components/Expos";
 
 import { content } from "../content/languages";
 import { Helmet } from "react-helmet";
 
-const IndexPage = (props) => {
+const ExposPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
 
   languageToUse = content.english;
@@ -23,8 +19,9 @@ const IndexPage = (props) => {
           lang: "en",
         }}
       >
-        <title>Claire Turner Design</title>
+        <title>Expos</title>
         <meta name="robots" content="index, follow" />
+
         <meta
           name="description"
           content="Children's Illustrations for all ages made by Claire Turner, in Talloires, France."
@@ -35,26 +32,26 @@ const IndexPage = (props) => {
         />
         <link rel="canonical" href="https://www.claireturner-design.com/" />
       </Helmet>
-      <div className="landing">
+      <div className="shells">
         <Header
           language={language}
           setLanguage={setLanguage}
           languageToUse={languageToUse}
         />
-        <h1>Original Paintings, Fine Art Prints and Personalised Comissions</h1>
-        <div className="bunting" />
+        <Expos
+          language={language}
+          setLanguage={setLanguage}
+          languageToUse={languageToUse}
+        />
+        <Footer
+          language={language}
+          setLanguage={setLanguage}
+          languageToUse={languageToUse}
+        />
       </div>
-      <Intro language={language} languageToUse={languageToUse} />
-      <Contact language={language} languageToUse={languageToUse} />
-      <Insta language={language} languageToUse={languageToUse} />
-      <Footer
-        language={language}
-        setLanguage={setLanguage}
-        languageToUse={languageToUse}
-      />
     </div>
   );
 };
 
-IndexPage.Layout = Layout;
-export default IndexPage;
+ExposPage.Layout = Layout;
+export default ExposPage;

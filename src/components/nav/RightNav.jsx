@@ -129,10 +129,10 @@ const RightNav = (props) => {
       <Dash>-</Dash>
       <li>
         <Link
-          to={language === "english" ? "/shells" : "/fr/shells"}
+          to={language === "english" ? "/expos" : "/fr/expos"}
           onClick={() => setOpen(!open)}
         >
-          Shells and Shanties
+          Expos
         </Link>
       </li>
     </Ul>
