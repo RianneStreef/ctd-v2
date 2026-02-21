@@ -16,7 +16,7 @@
 .category-select-button {
   font-family: "Andalemo";
   min-width: 150px;
-  margin: 10px 20px
+  margin: 10px 20px;
 }
 
 .product-card {
@@ -45,7 +45,7 @@
   margin-bottom: 0;
   padding: 10px;
   border-top: 1px solid black;
-  font-family: 'Andalemo';
+  font-family: "Andalemo";
   opacity: 0;
   transition: opacity 500ms ease-in;
 }
@@ -59,10 +59,6 @@
   background-color: #000;
   color: #fff;
   padding: 4px;
-  width: 20%;
+  width: 31%;
   text-align: right;
-}
-
-.product-price:before {
-  content: '€';
 }
